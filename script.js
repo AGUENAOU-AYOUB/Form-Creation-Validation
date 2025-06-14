@@ -12,21 +12,21 @@ document.addEventListener("DOMContentLoaded", function () {
         let isValid = true;
         const messages = [];
 
-        if (userName.lentgh < 3) {
+        if (userName.length < 3) {
             isValid = false;
             messages.push('Your Username Is Not Valid ❌')
         }
-        if (!email.includes('@') && !email.includes('.')) {
+        if (!email.includes('@')  || !email.includes('.')) {
             isValid = false;
             messages.push('Your Email Is Not Valid ❌')
         }
-        if (password < 8) {
+        if (password.length < 8) {
             isValid = false;
             messages.push('Your Password Is Not Valid ❌')
         }
         feedbackDiv.style.display = 'block';
         if (isValid) {
-            feedbackDiv.textcontent = "Registration seccessful!";
+            feedbackDiv.textContent = "Registration seccessful!";
             feedbackDiv.style.color = "#28a745";
             form.submit();
         } else {
