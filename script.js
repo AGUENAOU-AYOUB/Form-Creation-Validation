@@ -24,9 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
             messages.push('Your Password Is Not Valid ❌')
         }
+
         feedbackDiv.style.display = 'block';
+
         if (isValid) {
-            feedbackDiv.textContent = "Registration seccessful!";
+            feedbackDiv.textContent = "Registration successful!";
             feedbackDiv.style.color = "#28a745";
             form.submit();
         } else {
